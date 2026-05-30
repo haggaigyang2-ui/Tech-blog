@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Calculator - Professional Computing Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚙️</span>
+                <span class="logo-text">Engineering Calculator</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Engineering Tools for Students and Builders</h1>
+            <p class="hero-subtitle">Professional-grade calculators designed for precision and efficiency</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="calculator-container">
+            <h2>Calculator</h2>
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" class="display-input" readonly placeholder="0">
+                </div>
+                <div class="buttons-grid">
+                    <!-- Row 1 -->
+                    <button class="btn btn-function" onclick="clearDisplay()">C</button>
+                    <button class="btn btn-function" onclick="deleteLast()">DEL</button>
+                    <button class="btn btn-function" onclick="appendToDisplay('%')">%</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('/')">÷</button>
+
+                    <!-- Row 2 -->
+                    <button class="btn btn-number" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('*')">×</button>
+
+                    <!-- Row 3 -->
+                    <button class="btn btn-number" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('-')">−</button>
+
+                    <!-- Row 4 -->
+                    <button class="btn btn-number" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn btn-operator" onclick="appendToDisplay('+')">+</button>
+
+                    <!-- Row 5 -->
+                    <button class="btn btn-number" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn btn-number" onclick="appendToDisplay('.')">.</button>
+                    <button class="btn btn-function" onclick="toggleSign()">±</button>
+                    <button class="btn btn-equals" onclick="calculate()">=</button>
+                </div>
+                <div class="calculator-footer">
+                    <p>Advanced Functions: √(x) | x² | 1/x</p>
+                </div>
+            </div>
+            <div class="advanced-functions">
+                <button class="advanced-btn" onclick="squareRoot()">√</button>
+                <button class="advanced-btn" onclick="square()">x²</button>
+                <button class="advanced-btn" onclick="reciprocal()">1/x</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="features-container">
+            <h2>Our Features</h2>
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Basic Calculator</h3>
+                    <p>Perform essential arithmetic operations with precision and ease. Perfect for quick calculations.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feature-icon">📐</div>
+                    <h3>Area Calculator</h3>
+                    <p>Calculate areas of various shapes including rectangles, circles, triangles, and more.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Unit Converter</h3>
+                    <p>Convert between different units of measurement including length, weight, temperature, and volume.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Force Calculator</h3>
+                    <p>Calculate forces, acceleration, and work using fundamental physics equations and principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Engineering Calculator</h2>
+                <p>
+                    Engineering Calculator is a comprehensive web-based tool designed to assist students, engineers, and builders in their daily calculations. Our platform combines ease of use with powerful computational capabilities to solve complex engineering problems efficiently.
+                </p>
+                <p>
+                    Whether you're a student studying physics and mathematics, an engineer working on projects, or a builder planning constructions, our calculator provides the precision tools you need. With an intuitive interface and professional design, we make engineering calculations accessible to everyone.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <h4>✓ Accurate</h4>
+                        <p>Precision calculations for engineering applications</p>
+                    </div>
+                    <div class="about-feature">
+                        <h4>✓ Fast</h4>
+                        <p>Instant results for your calculations</p>
+                    </div>
+                    <div class="about-feature">
+                        <h4>✓ Reliable</h4>
+                        <p>Built with professional standards in mind</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-placeholder">
+                    <span>Engineering Excellence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p class="contact-subtitle">Have questions or suggestions? We'd love to hear from you!</p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <p>Email: info@engineeringcalc.com</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <p>Location: Tech Innovation Hub, Digital City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 Engineering Calculator. All rights reserved.</p>
+            <p>Designed with precision for engineers, students, and builders worldwide.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
